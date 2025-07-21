@@ -1,0 +1,1 @@
+Based on design and copy by [Dolapo Oye](https://medium.com/@DforDolapo) from her blog post: [Oops but Make It Professional: UX Writing for a 404 Error Page](https://medium.com/design-bootcamp/oops-but-make-it-professional-ux-writing-for-a-404-error-page-4c498caee60a)
