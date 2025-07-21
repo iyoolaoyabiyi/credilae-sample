@@ -13,6 +13,7 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-xl: 36rem;
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
@@ -24,6 +25,7 @@
     --font-weight-bold: 700;
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-primary: #0916f8;
@@ -178,6 +180,12 @@
   }
 }
 @layer utilities {
+  .m-auto {
+    margin: auto;
+  }
+  .my-4 {
+    margin-block: calc(var(--spacing) * 4);
+  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
   }
@@ -214,6 +222,15 @@
   .max-w-\[600px\] {
     max-width: 600px;
   }
+  .max-w-\[1000px\] {
+    max-width: 1000px;
+  }
+  .max-w-\[1200px\] {
+    max-width: 1200px;
+  }
+  .max-w-xl {
+    max-width: var(--container-xl);
+  }
   .min-w-\[unset\] {
     min-width: unset;
   }
@@ -246,6 +263,9 @@
   }
   .self-start {
     align-self: flex-start;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
   }
   .rounded-xl {
     border-radius: var(--radius-xl);
@@ -280,6 +300,9 @@
   }
   .bg-center {
     background-position: center;
+  }
+  .bg-right {
+    background-position: right;
   }
   .bg-no-repeat {
     background-repeat: no-repeat;
@@ -393,6 +416,31 @@
       outline-width: 0px;
     }
   }
+  .min-\[1200px\]\:my-4 {
+    @media (width >= 1200px) {
+      margin-block: calc(var(--spacing) * 4);
+    }
+  }
+  .min-\[1200px\]\:rounded-2xl {
+    @media (width >= 1200px) {
+      border-radius: var(--radius-2xl);
+    }
+  }
+  .min-\[1300px\]\:my-4 {
+    @media (width >= 1300px) {
+      margin-block: calc(var(--spacing) * 4);
+    }
+  }
+  .min-\[1300px\]\:rounded-2xl {
+    @media (width >= 1300px) {
+      border-radius: var(--radius-2xl);
+    }
+  }
+  .lg\:my-4 {
+    @media (width >= 64rem) {
+      margin-block: calc(var(--spacing) * 4);
+    }
+  }
   .lg\:\!block {
     @media (width >= 64rem) {
       display: block !important;
@@ -431,6 +479,11 @@
   .lg\:justify-between {
     @media (width >= 64rem) {
       justify-content: space-between;
+    }
+  }
+  .lg\:rounded-2xl {
+    @media (width >= 64rem) {
+      border-radius: var(--radius-2xl);
     }
   }
   .lg\:bg-\[url\(\.\.\/images\/wave\.svg\)\] {
